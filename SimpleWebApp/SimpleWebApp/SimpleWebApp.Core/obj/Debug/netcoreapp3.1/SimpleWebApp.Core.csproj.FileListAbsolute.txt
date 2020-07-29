@@ -1,0 +1,9 @@
+D:\work\training\trainingNet\trainingDotNet\SimpleWebApp\SimpleWebApp\SimpleWebApp.Core\bin\Debug\netcoreapp3.1\SimpleWebApp.Core.deps.json
+D:\work\training\trainingNet\trainingDotNet\SimpleWebApp\SimpleWebApp\SimpleWebApp.Core\bin\Debug\netcoreapp3.1\SimpleWebApp.Core.dll
+D:\work\training\trainingNet\trainingDotNet\SimpleWebApp\SimpleWebApp\SimpleWebApp.Core\bin\Debug\netcoreapp3.1\SimpleWebApp.Core.pdb
+D:\work\training\trainingNet\trainingDotNet\SimpleWebApp\SimpleWebApp\SimpleWebApp.Core\obj\Debug\netcoreapp3.1\SimpleWebApp.Core.csprojAssemblyReference.cache
+D:\work\training\trainingNet\trainingDotNet\SimpleWebApp\SimpleWebApp\SimpleWebApp.Core\obj\Debug\netcoreapp3.1\SimpleWebApp.Core.AssemblyInfoInputs.cache
+D:\work\training\trainingNet\trainingDotNet\SimpleWebApp\SimpleWebApp\SimpleWebApp.Core\obj\Debug\netcoreapp3.1\SimpleWebApp.Core.AssemblyInfo.cs
+D:\work\training\trainingNet\trainingDotNet\SimpleWebApp\SimpleWebApp\SimpleWebApp.Core\obj\Debug\netcoreapp3.1\SimpleWebApp.Core.csproj.CoreCompileInputs.cache
+D:\work\training\trainingNet\trainingDotNet\SimpleWebApp\SimpleWebApp\SimpleWebApp.Core\obj\Debug\netcoreapp3.1\SimpleWebApp.Core.dll
+D:\work\training\trainingNet\trainingDotNet\SimpleWebApp\SimpleWebApp\SimpleWebApp.Core\obj\Debug\netcoreapp3.1\SimpleWebApp.Core.pdb

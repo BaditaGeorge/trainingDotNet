@@ -1,0 +1,13 @@
+D:\work\training\trainingNet\trainingDotNet\SimpleWebApp\boxing\boxing\boxing\obj\Debug\netcoreapp3.1\boxing.csprojAssemblyReference.cache
+D:\work\training\trainingNet\trainingDotNet\SimpleWebApp\boxing\boxing\boxing\obj\Debug\netcoreapp3.1\boxing.AssemblyInfoInputs.cache
+D:\work\training\trainingNet\trainingDotNet\SimpleWebApp\boxing\boxing\boxing\obj\Debug\netcoreapp3.1\boxing.AssemblyInfo.cs
+D:\work\training\trainingNet\trainingDotNet\SimpleWebApp\boxing\boxing\boxing\obj\Debug\netcoreapp3.1\boxing.csproj.CoreCompileInputs.cache
+D:\work\training\trainingNet\trainingDotNet\SimpleWebApp\boxing\boxing\boxing\bin\Debug\netcoreapp3.1\boxing.exe
+D:\work\training\trainingNet\trainingDotNet\SimpleWebApp\boxing\boxing\boxing\bin\Debug\netcoreapp3.1\boxing.deps.json
+D:\work\training\trainingNet\trainingDotNet\SimpleWebApp\boxing\boxing\boxing\bin\Debug\netcoreapp3.1\boxing.runtimeconfig.json
+D:\work\training\trainingNet\trainingDotNet\SimpleWebApp\boxing\boxing\boxing\bin\Debug\netcoreapp3.1\boxing.runtimeconfig.dev.json
+D:\work\training\trainingNet\trainingDotNet\SimpleWebApp\boxing\boxing\boxing\bin\Debug\netcoreapp3.1\boxing.dll
+D:\work\training\trainingNet\trainingDotNet\SimpleWebApp\boxing\boxing\boxing\bin\Debug\netcoreapp3.1\boxing.pdb
+D:\work\training\trainingNet\trainingDotNet\SimpleWebApp\boxing\boxing\boxing\obj\Debug\netcoreapp3.1\boxing.dll
+D:\work\training\trainingNet\trainingDotNet\SimpleWebApp\boxing\boxing\boxing\obj\Debug\netcoreapp3.1\boxing.pdb
+D:\work\training\trainingNet\trainingDotNet\SimpleWebApp\boxing\boxing\boxing\obj\Debug\netcoreapp3.1\boxing.genruntimeconfig.cache

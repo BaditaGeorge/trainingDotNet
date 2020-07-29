@@ -1,0 +1,26 @@
+﻿@page
+@model TMovies.Pages.ActorsModel
+@{
+    ViewData["Title"] = "Actors";
+}
+
+<h1>Actors</h1>
+
+<table class="table">
+    @foreach (var entry in Model.ActorsData)
+    {
+        <tr>
+            <td>@entry.Id</td>
+            <td>@entry.Name</td>
+            <td>
+                <a class="btn btn-lg" asp-page="./ActorDetails" asp-route-actorId="@entry.Id">
+                    Details
+                </a>
+            </td>
+        </tr>
+    }
+</table>
+
+
+<a class="btn btn-lg" asp-page="./AddActor">Add Actor</a>
+

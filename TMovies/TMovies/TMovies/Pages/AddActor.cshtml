@@ -1,0 +1,28 @@
+﻿@page
+@model TMovies.Pages.AddActorModel
+@{
+    ViewData["Title"] = "AddActor";
+}
+
+<h1>AddActor</h1>
+
+<form method="post">
+    <input type="hidden" asp-for="Actor.Id" />
+    <div class="form-group">
+        <label>Name</label>
+        <input asp-for="Actor.Name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Birth Date</label>
+        <input asp-for="Actor.Birthdate" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Age</label>
+        <input asp-for="Actor.Age" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Movie-Id</label>
+        <input asp-for="Actor.MoviesId" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>

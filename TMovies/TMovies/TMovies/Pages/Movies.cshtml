@@ -1,0 +1,40 @@
+﻿@page
+@model TMovies.Pages.MoviesModel
+@{
+    ViewData["Title"] = "Movies";
+}
+
+<h1>Movies</h1>
+
+<form method="get">
+    <div class="form-group">
+        <div class="input-group">
+            <input type="search" class="form-control" asp-for="SearchTerm" />
+            <span class="input-group-btn">
+                <button class="btn btn-default">
+                    Search
+                </button>
+            </span>
+        </div>
+    </div>
+</form>
+
+
+<table class="table">
+    @foreach(var entry in Model.MoviesData)
+    {
+        <tr>
+            <td>@entry.Id</td>
+            <td>@entry.Title</td>
+            <td>@entry.Release</td>
+            <td>
+                <a class="btn btn-lg" asp-page="./Details" asp-route-movieId="@entry.Id">
+                    Details
+                </a>
+            </td>
+        </tr>
+    }
+</table>
+
+<a class="btn btn-lg" asp-page="./AddMovie">Add Movie</a>
+

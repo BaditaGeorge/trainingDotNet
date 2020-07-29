@@ -1,0 +1,16 @@
+﻿@page
+@model TMovies.Pages.DetailsModel
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>@Model.movie.Title</h1>
+<br />
+<p>Release Date: @Model.movie.Release</p>
+<p>Description: @Model.movie.Description</p>
+<p>Name: @foreach (var actor in Model.movie.Actors)
+{
+    <p>actor.Name</p>
+}
+</p>
+

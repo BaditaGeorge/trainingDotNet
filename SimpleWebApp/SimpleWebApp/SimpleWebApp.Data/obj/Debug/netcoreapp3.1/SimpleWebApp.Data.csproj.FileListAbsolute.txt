@@ -1,0 +1,15 @@
+D:\work\training\trainingNet\trainingDotNet\SimpleWebApp\SimpleWebApp\SimpleWebApp.Data\bin\Debug\netcoreapp3.1\SimpleWebApp.Data.deps.json
+D:\work\training\trainingNet\trainingDotNet\SimpleWebApp\SimpleWebApp\SimpleWebApp.Data\bin\Debug\netcoreapp3.1\SimpleWebApp.Data.dll
+D:\work\training\trainingNet\trainingDotNet\SimpleWebApp\SimpleWebApp\SimpleWebApp.Data\bin\Debug\netcoreapp3.1\SimpleWebApp.Data.pdb
+D:\work\training\trainingNet\trainingDotNet\SimpleWebApp\SimpleWebApp\SimpleWebApp.Data\bin\Debug\netcoreapp3.1\SimpleWebApp.Core.dll
+D:\work\training\trainingNet\trainingDotNet\SimpleWebApp\SimpleWebApp\SimpleWebApp.Data\bin\Debug\netcoreapp3.1\SimpleWebApp.Core.pdb
+D:\work\training\trainingNet\trainingDotNet\SimpleWebApp\SimpleWebApp\SimpleWebApp.Data\obj\Debug\netcoreapp3.1\SimpleWebApp.Data.csprojAssemblyReference.cache
+D:\work\training\trainingNet\trainingDotNet\SimpleWebApp\SimpleWebApp\SimpleWebApp.Data\obj\Debug\netcoreapp3.1\SimpleWebApp.Data.AssemblyInfoInputs.cache
+D:\work\training\trainingNet\trainingDotNet\SimpleWebApp\SimpleWebApp\SimpleWebApp.Data\obj\Debug\netcoreapp3.1\SimpleWebApp.Data.AssemblyInfo.cs
+D:\work\training\trainingNet\trainingDotNet\SimpleWebApp\SimpleWebApp\SimpleWebApp.Data\obj\Debug\netcoreapp3.1\SimpleWebApp.Data.csproj.CopyComplete
+D:\work\training\trainingNet\trainingDotNet\SimpleWebApp\SimpleWebApp\SimpleWebApp.Data\obj\Debug\netcoreapp3.1\SimpleWebApp.Data.dll
+D:\work\training\trainingNet\trainingDotNet\SimpleWebApp\SimpleWebApp\SimpleWebApp.Data\obj\Debug\netcoreapp3.1\SimpleWebApp.Data.pdb
+D:\work\training\trainingNet\trainingDotNet\SimpleWebApp\SimpleWebApp\SimpleWebApp.Data\obj\Debug\netcoreapp3.1\SimpleWebApp.Data.csproj.CoreCompileInputs.cache
+D:\work\training\trainingNet\trainingDotNet\SimpleWebApp\SimpleWebApp\SimpleWebApp.Data\bin\Debug\netcoreapp3.1\SimpleWebApp.Data.runtimeconfig.json
+D:\work\training\trainingNet\trainingDotNet\SimpleWebApp\SimpleWebApp\SimpleWebApp.Data\bin\Debug\netcoreapp3.1\SimpleWebApp.Data.runtimeconfig.dev.json
+D:\work\training\trainingNet\trainingDotNet\SimpleWebApp\SimpleWebApp\SimpleWebApp.Data\obj\Debug\netcoreapp3.1\SimpleWebApp.Data.genruntimeconfig.cache

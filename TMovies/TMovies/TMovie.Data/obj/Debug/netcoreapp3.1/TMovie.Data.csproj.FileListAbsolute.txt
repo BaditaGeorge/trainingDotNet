@@ -1,0 +1,12 @@
+D:\work\training\trainingNet\trainingDotNet\TMovies\TMovies\TMovie.Data\bin\Debug\netcoreapp3.1\TMovie.Data.deps.json
+D:\work\training\trainingNet\trainingDotNet\TMovies\TMovies\TMovie.Data\bin\Debug\netcoreapp3.1\TMovie.Data.dll
+D:\work\training\trainingNet\trainingDotNet\TMovies\TMovies\TMovie.Data\bin\Debug\netcoreapp3.1\TMovie.Data.pdb
+D:\work\training\trainingNet\trainingDotNet\TMovies\TMovies\TMovie.Data\obj\Debug\netcoreapp3.1\TMovie.Data.csprojAssemblyReference.cache
+D:\work\training\trainingNet\trainingDotNet\TMovies\TMovies\TMovie.Data\obj\Debug\netcoreapp3.1\TMovie.Data.AssemblyInfoInputs.cache
+D:\work\training\trainingNet\trainingDotNet\TMovies\TMovies\TMovie.Data\obj\Debug\netcoreapp3.1\TMovie.Data.AssemblyInfo.cs
+D:\work\training\trainingNet\trainingDotNet\TMovies\TMovies\TMovie.Data\obj\Debug\netcoreapp3.1\TMovie.Data.dll
+D:\work\training\trainingNet\trainingDotNet\TMovies\TMovies\TMovie.Data\obj\Debug\netcoreapp3.1\TMovie.Data.pdb
+D:\work\training\trainingNet\trainingDotNet\TMovies\TMovies\TMovie.Data\bin\Debug\netcoreapp3.1\TMovie.Data.runtimeconfig.json
+D:\work\training\trainingNet\trainingDotNet\TMovies\TMovies\TMovie.Data\bin\Debug\netcoreapp3.1\TMovie.Data.runtimeconfig.dev.json
+D:\work\training\trainingNet\trainingDotNet\TMovies\TMovies\TMovie.Data\obj\Debug\netcoreapp3.1\TMovie.Data.genruntimeconfig.cache
+D:\work\training\trainingNet\trainingDotNet\TMovies\TMovies\TMovie.Data\obj\Debug\netcoreapp3.1\TMovie.Data.csproj.CoreCompileInputs.cache
