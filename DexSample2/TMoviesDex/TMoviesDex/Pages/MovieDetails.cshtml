@@ -1,0 +1,66 @@
+﻿@page
+@*@model TMoviesDex.Pages.MovieDetailsModel*@
+@using TMoviesDex.Models
+@{
+    ViewData["Title"] = "MovieDetails";
+}
+
+<style>
+    #chart{
+        height:440px;
+    }
+</style>
+
+<h1>MovieDetails</h1>
+
+@*@(Html.DevExtreme().Form<SampleMovie>()
+    .Items(
+        items =>
+        {
+            items.AddSimpleFor(m => m.Title);
+            items.AddSimpleFor(m => m.ReleaseData);
+        }
+    ))*@
+
+<div id="my-popup">
+    <p>Popup content</p>
+</div>
+
+@(Html.DevExtreme().Chart()
+    .ID("chart")
+    .Series(s =>
+        s.Add().ArgumentField("Day").ValueField("Oranges").Name("Portocalele").Type(SeriesType.Bar).Color("#ffaa66"))
+    .DataSource(new[] {
+        new { Day = "Monday", Oranges = 3 },
+        new { Day = "Tuesday", Oranges = 2 },
+        new { Day = "Wednesday", Oranges = 3 },
+        new { Day = "Thursday", Oranges = 4 },
+        new { Day = "Friday", Oranges = 6 },
+        new { Day = "Saturday", Oranges = 11 },
+        new { Day = "Sunday", Oranges = 4 }
+    })
+)
+
+@*@(Html.DevExtreme().DataGrid()
+        .Columns(columns => { // specifies a collection of columns
+            columns.Add() // adds the "CustomerID" column
+                .DataField("CustomerID");
+
+            columns.Add() // adds the "OrderDate" column
+                .DataField("OrderDate")
+                .DataType(GridColumnDataType.Date);
+        })
+    )*@
+
+@(Html.DevExtreme().DataGrid<SampleMovie>()
+                .ShowBorders(true)
+                .DataSource(d => d.Mvc().Controller("SampleSingleMovie").LoadAction("Get").Key("MovieId"))
+                .Columns(columns =>
+                {
+                    columns.AddFor(m => m.MovieId);
+                    columns.AddFor(m => m.Title);
+                    columns.AddFor(m => m.Budget);
+                    columns.AddFor(m => m.ReleaseData);
+                    columns.AddFor(m => m.Actors);
+                })
+    )

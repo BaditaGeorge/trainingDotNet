@@ -18,6 +18,28 @@ namespace TMovie.Data.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("TMovie.Data.ActorMovies", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("ActorId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MoviesId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ActorId");
+
+                    b.HasIndex("MoviesId");
+
+                    b.ToTable("ActorMovies");
+                });
+
             modelBuilder.Entity("TMovies.Data.Actor", b =>
                 {
                     b.Property<int>("Id")
@@ -32,16 +54,11 @@ namespace TMovie.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("MoviesId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("MoviesId");
 
                     b.ToTable("Actors");
                 });
@@ -70,10 +87,16 @@ namespace TMovie.Data.Migrations
                     b.ToTable("Movies");
                 });
 
-            modelBuilder.Entity("TMovies.Data.Actor", b =>
+            modelBuilder.Entity("TMovie.Data.ActorMovies", b =>
                 {
+                    b.HasOne("TMovies.Data.Actor", "Actor")
+                        .WithMany("ActorMovies")
+                        .HasForeignKey("ActorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("TMovies.Data.Movies", "Movies")
-                        .WithMany("Actors")
+                        .WithMany("ActorMovies")
                         .HasForeignKey("MoviesId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();

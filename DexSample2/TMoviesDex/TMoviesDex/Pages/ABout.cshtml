@@ -1,0 +1,48 @@
+﻿@page
+@*@model TMoviesDex.Pages.ABoutModel*@
+@using TMoviesDex.Models
+@{
+    ViewData["Title"] = "ABout";
+}
+
+<h1>MoviesHere</h1>
+
+<script>
+    function displayAlert(resp) {
+        //console.log(resp);
+        //console.log(resp.data);
+        location.href = "/MovieDetails";
+    }
+</script>
+
+@(Html.DevExtreme().DataGrid<SampleMovie>()
+        .ShowBorders(true)
+        .DataSource(d => d.Mvc().Controller("SampleDataMovie").LoadAction("Get").Key("MovieId"))
+        .Columns(columns =>
+        {
+            columns.AddFor(m => m.MovieId);
+            columns.AddFor(m => m.Title);
+            columns.AddFor(m => m.Budget);
+            columns.AddFor(m => m.ReleaseData);
+            columns.AddFor(m => m.Actors);
+        })
+        .OnRowClick("displayAlert")
+)
+
+@*@(Html.DevExtreme().TreeList<SampleMovie>()
+    .ShowBorders(true)
+    .DataSource(d => d.Mvc().Controller("SampleDataMovie").LoadAction("Get").Key("MovieId"))
+    .KeyExpr("MovieId")
+    .ParentIdExpr("Movie_Parent_Id")
+    .ExpandedRowKeys(new[] { 1, 2 })
+    .SelectedRowKeys(new[] { 1, 29, 42 })
+    .SearchPanel(searchPanel => searchPanel
+    .Visible(true)
+    .Width(250))
+    .Columns(columns =>
+    {
+        columns.AddFor(m => m.MovieId);
+        columns.AddFor(m => m.Title);
+        columns.AddFor(m => m.Budget);
+    })
+)*@

@@ -20,9 +20,18 @@
         <label>Age</label>
         <input asp-for="Actor.Age" class="form-control" />
     </div>
+    @*<div class="form-group">
+            <label>Movie-Id</label>
+            <input asp-for="Actor.MoviesId" class="form-control" />
+        </div>*@
     <div class="form-group">
-        <label>Movie-Id</label>
-        <input asp-for="Actor.MoviesId" class="form-control" />
+        <label>Movie</label>
+        <select class="form-control" asp-for="Title">
+            @foreach(var movie in Model.movies)
+            {
+                <option>@movie.Title</option>
+            }
+        </select>
     </div>
     <button type="submit" class="btn btn-primary">Save</button>
 </form>

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Text;
 using System.Linq;
 using System.ComponentModel;
+using System.Data.Entity;
+using TMovie.Data;
 
 namespace TMovies.Data
 {
@@ -37,6 +39,7 @@ namespace TMovies.Data
         {
             return from a in db.Actors where string.IsNullOrEmpty(name) || a.Name.StartsWith(name) orderby a.Name select a;
         }
+
         public Actor GetById(int id)
         {
             return db.Actors.Find(id);
@@ -47,6 +50,15 @@ namespace TMovies.Data
             db.Add(newActor);
             db.SaveChanges();
             return newActor;
+        }
+
+        public void AddBinding(int movieId, int actorId)
+        {
+            ActorMovies am = new ActorMovies();
+            am.MoviesId = movieId;
+            am.ActorId = actorId;
+            db.Add(am);
+            db.SaveChanges();
         }
 
         public Actor Update(Actor updatedActor)
@@ -72,7 +84,10 @@ namespace TMovies.Data
 
         public Movies GetById(int id)
         {
-            return db.Movies.Find(id);
+            Movies movie = db.Movies.Find(id);
+            //List<Movies> movie = db.Movies.Include(m => m.Actors).Where(m => m.Id == id).ToList();
+            db.Entry(movie).Collection(m => m.ActorMovies).Load();
+            return movie;
         }
 
         public Movies Add(Movies newMovie)

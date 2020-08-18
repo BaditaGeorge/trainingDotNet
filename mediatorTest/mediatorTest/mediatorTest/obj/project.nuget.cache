@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "Xdo8j5atpIRB4VUd7dqxrouZKmm1MtS6/RCEU08nGgV4cPWP6RcSiA09opN+Qk4U/AiSgqK382i4w191Ufd0mQ==",
+  "success": true,
+  "projectFilePath": "D:\\work\\training\\trainingNet\\trainingDotNet\\mediatorTest\\mediatorTest\\mediatorTest\\mediatorTest.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Gogu\\.nuget\\packages\\mediatr\\8.1.0\\mediatr.8.1.0.nupkg.sha512",
+    "C:\\Users\\Gogu\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\8.1.0\\mediatr.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512",
+    "C:\\Users\\Gogu\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.0.0\\microsoft.extensions.dependencyinjection.abstractions.2.0.0.nupkg.sha512",
+    "C:\\Users\\Gogu\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

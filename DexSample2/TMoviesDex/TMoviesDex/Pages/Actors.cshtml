@@ -1,0 +1,29 @@
+﻿@page
+@*@model TMoviesDex.Pages.ActorsModel*@
+@using TMoviesDex.Models
+@{
+    ViewData["Title"] = "Actors";
+}
+
+<h1>Actors</h1>
+
+@(Html.DevExtreme().DataGrid<Actor>()
+        .ShowBorders(true)
+        .DataSource(d => d.Mvc().Controller("SampleActors").LoadAction("Get").Key("ActorId"))
+        .Columns(columns =>
+        {
+            columns.AddFor(a => a.ActorId);
+            columns.AddFor(a => a.Name);
+            columns.AddFor(a => a.Birthdate);
+        })
+//.OnRowClick("displayAlert")
+)
+
+<br /><br />
+
+@(Html.DevExtreme().Form<Actor>()
+    .ID("form")
+    .Items(items => {
+        items.AddSimpleFor(a => a.Name);
+        items.AddSimpleFor(a => a.Birthdate);
+    }))

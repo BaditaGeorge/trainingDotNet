@@ -12,13 +12,20 @@ namespace TMovies.Pages
     public class AddActorModel : PageModel
     {
         private readonly SqlActor actorData;
+        private readonly SqlMovie movieData;
         private readonly IHtmlHelper htmlHelper;
+        public IEnumerable<Movies> movies;
 
         [BindProperty]
         public Actor Actor { get; set; }
-        public AddActorModel(SqlActor actorData, IHtmlHelper htmlHelper)
+
+        [BindProperty]
+        public string Title { get; set; }
+        public AddActorModel(SqlActor actorData, SqlMovie movieData, IHtmlHelper htmlHelper)
         {
             this.actorData = actorData;
+            this.movieData = movieData;
+            movies = this.movieData.GetMovieByTitle("");
             this.htmlHelper = htmlHelper;
         }
 
@@ -26,7 +33,15 @@ namespace TMovies.Pages
         {
             if (!ModelState.IsValid)
             {
+                int movieId = -1;
+                foreach (var i in movies)
+                {
+                    if (i.Title.StartsWith(Title)){
+                        movieId = i.Id;
+                    }
+                }
                 actorData.Add(Actor);
+                actorData.AddBinding(movieId, Actor.Id);
             }
             return RedirectToPage("./Movies");
         }

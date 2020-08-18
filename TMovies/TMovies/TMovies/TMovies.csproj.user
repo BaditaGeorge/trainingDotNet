@@ -8,5 +8,10 @@
     <WebStackScaffolding_IsPartialViewSelected>False</WebStackScaffolding_IsPartialViewSelected>
     <WebStackScaffolding_IsReferencingScriptLibrariesSelected>True</WebStackScaffolding_IsReferencingScriptLibrariesSelected>
     <WebStackScaffolding_LayoutPageFile />
+    <_SelectedScaffolderID>ApiControllerWithActionsScaffolder</_SelectedScaffolderID>
+    <_SelectedScaffolderCategoryPath>root/DevExtreme</_SelectedScaffolderCategoryPath>
+    <DevExtremeCreateAsPartial>False</DevExtremeCreateAsPartial>
+    <DevExtremeUseLayout>True</DevExtremeUseLayout>
+    <DevExtremeSelectedDataContextName>TMoviesDbContext %28TMovies.Data%29</DevExtremeSelectedDataContextName>
   </PropertyGroup>
 </Project>
