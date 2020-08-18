@@ -1,0 +1,46 @@
+﻿@page
+@{
+    ViewData["Title"] = "Actors";
+}
+
+<script>
+    function show(event) {
+        console.log(event.row.data);
+        location.href = 'ActorDetails?actorId=' + event.row.data.Id;
+    }
+</script>
+
+<h2>Actors</h2>
+
+@(Html.DevExtreme().DataGrid<TMoviesDex2.Models.Actor>()
+    .DataSource(ds => ds.Mvc()
+        .Controller("Actor")
+        .LoadAction("Get")
+        .InsertAction("Post")
+        .UpdateAction("Put")
+        .DeleteAction("Delete")
+        .Key("Id")
+    )
+    .RemoteOperations(true)
+    .Columns(columns =>
+    {
+
+        columns.AddFor(m => m.Name);
+
+        columns.AddFor(m => m.Birthdate);
+
+        columns.AddFor(m => m.Age);
+
+        columns.Add().Type(GridCommandColumnType.Buttons).Buttons(b =>
+        {
+            b.Add().Name(GridColumnButtonName.Edit).Icon("edit");
+            b.Add().Name(GridColumnButtonName.Delete).Icon("trash");
+            b.Add().Text("View").Icon("link").OnClick(@<text>show</text>);
+        }).Width(200);
+    })
+    .Editing(e => e
+        .AllowAdding(true)
+        .AllowUpdating(true)
+        .AllowDeleting(true)
+    )
+)

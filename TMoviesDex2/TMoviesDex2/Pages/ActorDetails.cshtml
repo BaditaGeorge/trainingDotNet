@@ -1,0 +1,41 @@
+﻿@page
+@model ActorDetailsModel
+@{
+    ViewData["Title"] = "ActorDetails";
+}
+
+<h2>ActorDetails</h2>
+
+<div>
+    <br />
+    <p>Actor</p>
+    @using (Html.BeginForm())
+    {
+        using (Html.DevExtreme().ValidationGroup())
+        {
+            @Html.AntiForgeryToken()
+            @(Html.DevExtreme().Form<TMoviesDex2.Models.Actor>()
+                .Items(items =>
+                {
+                    items.AddSimpleFor(m => m.Id).Editor(e =>e.TextBox().Visible(false)).Visible(false);
+                    items.AddSimpleFor(m => m.Name);
+                    items.AddSimpleFor(m => m.Birthdate);
+                    items.AddSimpleFor(m => m.Age);
+                    items.AddButton()
+                    .HorizontalAlignment(HorizontalAlignment.Left)
+                    .ButtonOptions(b => b.Text("Save")
+                    .Type(ButtonType.Success)
+                    .UseSubmitBehavior(true));
+                })
+                .ID("form")
+                .ColCount(1)
+                .FormData(Model.ActualActor)
+                .LabelLocation(FormLabelLocation.Top)
+                .MinColWidth(300)
+                .ReadOnly(false)
+                .ShowColonAfterLabel(true)
+        )
+        }
+    }
+</div>
+

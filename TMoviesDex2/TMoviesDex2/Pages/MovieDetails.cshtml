@@ -1,0 +1,72 @@
+﻿@page
+@{
+    ViewData["Title"] = "MovieDetails";
+    var pageId = ViewContext.RouteData.Values["id"];
+    if(pageId == null)
+    {
+        pageId = 2;
+    }
+}
+
+    
+@model TMoviesDex2.Models.Movie
+<h2>MovieDetails</h2>
+
+<div>
+<br />
+<p>Movie</p>
+@using (Html.BeginForm("Validation","MovieDetails",FormMethod.Post))
+{
+    using (Html.DevExtreme().ValidationGroup())
+    {
+                @Html.AntiForgeryToken()
+                @(Html.DevExtreme().SelectBox()
+                .DisplayExpr("Title")
+                .DataSource(d => d.Mvc().Controller("MovieDetails").LoadAction("GetMovieDetails").Key("Id"))
+                .Value(2)
+                .OnValueChanged("onValueChange"))
+                @(Html.DevExtreme().Form<TMoviesDex2.Models.Movie>()
+                .Items(items =>
+                {
+                    items.AddSimpleFor(m => m.Id);
+                    items.AddSimpleFor(m => m.Title);
+                    items.AddSimpleFor(m => m.Release);
+                    items.AddSimpleFor(m => m.Budget);
+                    items.AddButton()
+                    .HorizontalAlignment(HorizontalAlignment.Left)
+                    .ButtonOptions(b => b.Text("Save")
+                    .Type(ButtonType.Success)
+                    .UseSubmitBehavior(true));
+                })
+                .ID("form")
+                .ColCount(1)
+                .FormData(Model)
+                .LabelLocation(FormLabelLocation.Top)
+                .MinColWidth(300)
+                .ReadOnly(false)
+                .ShowColonAfterLabel(true)
+        )
+    }
+}
+</div>
+    <script>
+        function onValueChange(data) {
+            let frm = $("#form").dxForm("instance");
+            frm.option("formData", data.value);
+        }
+    </script>
+
+
+@*@(Html.DevExtreme().Form<TMoviesDex2.Models.Movie>()
+    .Items(items => {
+
+        items.AddSimpleFor(m => m.Id);
+
+        items.AddSimpleFor(m => m.Title);
+
+        items.AddSimpleFor(m => m.Release);
+
+        items.AddSimpleFor(m => m.Budget);
+    })
+    
+)*@

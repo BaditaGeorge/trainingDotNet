@@ -1,0 +1,54 @@
+﻿@page
+@{
+    ViewData["Title"] = "Movies";
+}
+
+<script>
+    function show() {
+        alert("View Details!");
+    }
+</script>
+
+<h2>Movies</h2>
+
+@(Html.DevExtreme().DataGrid<TMoviesDex2.Models.Movie>()
+    .DataSource(ds => ds.Mvc()
+        .Controller("Movie")
+        .LoadAction("Get")
+        .InsertAction("Post")
+        .UpdateAction("Put")
+        .DeleteAction("Delete")
+        .Key("Id")
+    )
+    .RemoteOperations(true)
+    .Columns(columns => {
+
+    columns.AddFor(m => m.Title);
+
+    columns.AddFor(m => m.Release);
+
+    columns.AddFor(m => m.Budget);
+
+    columns.Add().Type(GridCommandColumnType.Buttons).Buttons(b =>
+    {
+        b.Add().Name(GridColumnButtonName.Edit).Icon("edit");
+        b.Add().Name(GridColumnButtonName.Delete).Icon("trash");
+        b.Add().Text("View").Icon("link").OnClick(@<text>show</text>);
+    }).Width(200);
+
+    @*columns.Add().CellTemplate(@Html.DevExtreme().Button().Text("View")).Buttons(b =>
+    {
+        b.Add().Name("Details").OnClick(@<text>show</text>);
+    });*@
+
+        @*columns.Add().Type(GridCommandColumnType.Selection)
+        .CellTemplate(@<text>
+            @Html.DevExtreme().Button().Text("View").Type(ButtonType.Normal);
+        </text>);*@
+    })
+    .Editing(e => e
+        .AllowAdding(true)
+        .AllowUpdating(true)
+        .AllowDeleting(true)
+    )
+)
